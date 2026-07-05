@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #222;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+.hero {
+    padding: 140px 20px 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 58px);
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: clamp(15px, 3vw, 20px);
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.upload-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .15);
+    color: #222;
+}
+
+.upload-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 35px;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.upload-btn:hover {
+    background: #1d4ed8;
+}
+
+@media(max-width:768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 80px 8%;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    text-align: center;
+    transition: .3s;
+    border: 1px solid #eef2ff;
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 45px rgba(37, 99, 235, .18);
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer {
+    background: #0f172a;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.footer-logo h2 {
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.footer-links h3 {
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #3b82f6;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+}
+
+.title {
+    text-align: center;
+    font-size: 38px;
+    margin: 70px 0 40px;
+    color: #2563eb;
+}
+
+.num {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media(max-width:768px) {
+
+    header {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 120px 15px 70px;
+    }
+
+    .upload-box {
+        padding: 25px;
+    }
+
+    .card,
+    .why-card,
+    .step {
+        padding: 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
+
+.stats h2 {
+    font-size: 42px;
+    color: #2563eb;
+}
+
+.stats .why-card h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #2563eb;
+}
